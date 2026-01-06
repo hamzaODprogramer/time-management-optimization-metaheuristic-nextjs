@@ -1,0 +1,893 @@
+{
+  "events": [
+    {
+      "id": 0,
+      "name": "TC S1",
+      "group": "TC S1",
+      "teacher": "MOHSINE HACHKAR",
+      "duration_slots": 1,
+      "min_capacity": 400,
+      "preferred_room_type": "Amphi"
+    },
+    {
+      "id": 1,
+      "name": "TC S3",
+      "group": "TC S3",
+      "teacher": "ABDELGHANI BOUSSAOUD",
+      "duration_slots": 1,
+      "min_capacity": 400,
+      "preferred_room_type": "Amphi"
+    },
+    {
+      "id": 2,
+      "name": "TC GB S3",
+      "group": "TC GB S3",
+      "teacher": null,
+      "duration_slots": 1,
+      "min_capacity": 400,
+      "preferred_room_type": "Amphi"
+    },
+    {
+      "id": 3,
+      "name": "BA/BP",
+      "group": "BA/BP",
+      "teacher": null,
+      "duration_slots": 1,
+      "min_capacity": 240,
+      "preferred_room_type": "Amphi"
+    },
+    {
+      "id": 4,
+      "name": "TC S3 - TD",
+      "group": "TC S3",
+      "teacher": null,
+      "duration_slots": 1,
+      "min_capacity": 90,
+      "preferred_room_type": "Large"
+    },
+    {
+      "id": 5,
+      "name": "IEEA",
+      "group": "IEEA",
+      "teacher": null,
+      "duration_slots": 1,
+      "min_capacity": 48,
+      "preferred_room_type": "Small"
+    },
+    {
+      "id": 6,
+      "name": "GC",
+      "group": "GC",
+      "teacher": null,
+      "duration_slots": 1,
+      "min_capacity": 48,
+      "preferred_room_type": "Small"
+    },
+    {
+      "id": 7,
+      "name": "IEGS",
+      "group": "IEGS",
+      "teacher": null,
+      "duration_slots": 1,
+      "min_capacity": 48,
+      "preferred_room_type": "Small"
+    },
+    {
+      "id": 8,
+      "name": "MST RD",
+      "group": "MST RD",
+      "teacher": null,
+      "duration_slots": 1,
+      "min_capacity": 90,
+      "preferred_room_type": "Large"
+    },
+    {
+      "id": 9,
+      "name": "TC S1 - TD GP & GI",
+      "group": "TC S1",
+      "teacher": null,
+      "duration_slots": 1,
+      "min_capacity": 90,
+      "preferred_room_type": "Large"
+    },
+    {
+      "id": 10,
+      "name": "EE+GARM",
+      "group": "EE+GARM",
+      "teacher": "ABDENNAIM GALADI",
+      "duration_slots": 1,
+      "min_capacity": 48,
+      "preferred_room_type": "Small"
+    },
+    {
+      "id": 11,
+      "name": "IFA + MIASI",
+      "group": "IFA",
+      "teacher": null,
+      "duration_slots": 1,
+      "min_capacity": 48,
+      "preferred_room_type": "Small"
+    },
+    {
+      "id": 12,
+      "name": "TC S1 - TD MTU GB & GEG",
+      "group": "TC S1 GB & GEG",
+      "teacher": null,
+      "duration_slots": 1,
+      "min_capacity": 48,
+      "preferred_room_type": "Small"
+    },
+    {
+      "id": 13,
+      "name": "SIR",
+      "group": "SIR",
+      "teacher": "SAID EL FEZAZI",
+      "duration_slots": 1,
+      "min_capacity": 240,
+      "preferred_room_type": "Amphi"
+    },
+    {
+      "id": 14,
+      "name": "BA provis sem 1",
+      "group": "BA",
+      "teacher": null,
+      "duration_slots": 1,
+      "min_capacity": 240,
+      "preferred_room_type": "Amphi"
+    },
+    {
+      "id": 15,
+      "name": "TC S1 GB & GEG",
+      "group": "TC S1 GB & GEG",
+      "teacher": "BADIA MOUNIR",
+      "duration_slots": 1,
+      "min_capacity": 400,
+      "preferred_room_type": "Amphi"
+    },
+    {
+      "id": 16,
+      "name": "TC S3 TD civisme",
+      "group": "TC S3",
+      "teacher": null,
+      "duration_slots": 1,
+      "min_capacity": 48,
+      "preferred_room_type": "Small"
+    },
+    {
+      "id": 17,
+      "name": "MIASI",
+      "group": "MIASI",
+      "teacher": null,
+      "duration_slots": 1,
+      "min_capacity": 48,
+      "preferred_room_type": "Small"
+    },
+    {
+      "id": 18,
+      "name": "IFA2 + IFA 3",
+      "group": "IFA",
+      "teacher": "KHALIL MOKHLIS",
+      "duration_slots": 1,
+      "min_capacity": 48,
+      "preferred_room_type": "Small"
+    },
+    {
+      "id": 19,
+      "name": "TC S3 - TD GP",
+      "group": "TC S3",
+      "teacher": null,
+      "duration_slots": 1,
+      "min_capacity": 90,
+      "preferred_room_type": "Large"
+    },
+    {
+      "id": 20,
+      "name": "TC GB S3 - TD biochimie structurale",
+      "group": "TC GB S3",
+      "teacher": null,
+      "duration_slots": 1,
+      "min_capacity": 90,
+      "preferred_room_type": "Large"
+    },
+    {
+      "id": 21,
+      "name": "Français ERME 1 + IEGS 1",
+      "group": "ERME",
+      "teacher": "ABDELLATIF ZOUANA",
+      "duration_slots": 1,
+      "min_capacity": 48,
+      "preferred_room_type": "Small"
+    },
+    {
+      "id": 22,
+      "name": "Anglais ERME 2 + IEGS 2",
+      "group": "ERME",
+      "teacher": null,
+      "duration_slots": 1,
+      "min_capacity": 48,
+      "preferred_room_type": "Small"
+    },
+    {
+      "id": 23,
+      "name": "Master IAII 2ème année",
+      "group": "Master IAII",
+      "teacher": "ABDALLAH SOULMANI",
+      "duration_slots": 1,
+      "min_capacity": 48,
+      "preferred_room_type": "Small"
+    },
+    {
+      "id": 24,
+      "name": "Digital et IA CI",
+      "group": "CI",
+      "teacher": null,
+      "duration_slots": 1,
+      "min_capacity": 400,
+      "preferred_room_type": "Amphi"
+    },
+    {
+      "id": 25,
+      "name": "TC S1 - TD GB & GEG",
+      "group": "TC S1 GB & GEG",
+      "teacher": "AHMED MOKHLIS",
+      "duration_slots": 1,
+      "min_capacity": 48,
+      "preferred_room_type": "Small"
+    },
+    {
+      "id": 26,
+      "name": "Maths pour l'ingénieur Pr Kzaz",
+      "group": "TC GB S3",
+      "teacher": "Kzaz",
+      "duration_slots": 1,
+      "min_capacity": 400,
+      "preferred_room_type": "Amphi"
+    },
+    {
+      "id": 27,
+      "name": "TD GB S3",
+      "group": "TC GB S3",
+      "teacher": null,
+      "duration_slots": 1,
+      "min_capacity": 90,
+      "preferred_room_type": "Large"
+    },
+    {
+      "id": 28,
+      "name": "Digital et IA CI TD",
+      "group": "CI",
+      "teacher": "AHMED EL HACHADI",
+      "duration_slots": 1,
+      "min_capacity": 48,
+      "preferred_room_type": "Small"
+    },
+    {
+      "id": 29,
+      "name": "Filières d'ingénieurs Digital Pr ELBOUSHAKI",
+      "group": "TC S1 GB & GEG",
+      "teacher": "ELBOUSHAKI",
+      "duration_slots": 1,
+      "min_capacity": 400,
+      "preferred_room_type": "Amphi"
+    },
+    {
+      "id": 30,
+      "name": "MASTER S1 RD",
+      "group": "MASTER S1 RD",
+      "teacher": null,
+      "duration_slots": 1,
+      "min_capacity": 90,
+      "preferred_room_type": "Large"
+    },
+    {
+      "id": 31,
+      "name": "TC GB S3 - TD",
+      "group": "TC GB S3",
+      "teacher": "MOHAMMED KHAYAR",
+      "duration_slots": 1,
+      "min_capacity": 90,
+      "preferred_room_type": "Large"
+    },
+    {
+      "id": 32,
+      "name": "TC S3 MSD AKDIM Enquete",
+      "group": "TC S3",
+      "teacher": null,
+      "duration_slots": 1,
+      "min_capacity": 400,
+      "preferred_room_type": "Amphi"
+    },
+    {
+      "id": 33,
+      "name": "TC S1 GI &GP",
+      "group": "TC S1",
+      "teacher": "RKIA EL IDRISSI",
+      "duration_slots": 1,
+      "min_capacity": 400,
+      "preferred_room_type": "Amphi"
+    },
+    {
+      "id": 34,
+      "name": "TC S1 Ratt et TD Bio Cellulaire Pr Bouamama GB GEG",
+      "group": "TC S1 GB GEG",
+      "teacher": "Bouamama",
+      "duration_slots": 1,
+      "min_capacity": 48,
+      "preferred_room_type": "Small"
+    },
+    {
+      "id": 35,
+      "name": "examen mtu prof rhatay",
+      "group": "MTU",
+      "teacher": "rhatay",
+      "duration_slots": 1,
+      "min_capacity": 48,
+      "preferred_room_type": "Small"
+    },
+    {
+      "id": 36,
+      "name": "SIT langues et gc",
+      "group": "SIT",
+      "teacher": "LAILA EL MAZOUZI",
+      "duration_slots": 1,
+      "min_capacity": 48,
+      "preferred_room_type": "Small"
+    },
+    {
+      "id": 37,
+      "name": "IFA + Modasim",
+      "group": "IFA",
+      "teacher": null,
+      "duration_slots": 1,
+      "min_capacity": 48,
+      "preferred_room_type": "Small"
+    },
+    {
+      "id": 38,
+      "name": "TC S1 - GP et GI Langues",
+      "group": "TC S1",
+      "teacher": "KHALID BENHIDA",
+      "duration_slots": 1,
+      "min_capacity": 400,
+      "preferred_room_type": "Amphi"
+    },
+    {
+      "id": 39,
+      "name": "TC GB S3 - TD",
+      "group": "TC GB S3",
+      "teacher": null,
+      "duration_slots": 1,
+      "min_capacity": 90,
+      "preferred_room_type": "Large"
+    },
+    {
+      "id": 40,
+      "name": "TC S3 - TD GP & GI",
+      "group": "TC S3",
+      "teacher": "ILHAM MOUNIR",
+      "duration_slots": 1,
+      "min_capacity": 90,
+      "preferred_room_type": "Large"
+    },
+    {
+      "id": 41,
+      "name": "TC S1 - TD",
+      "group": "TC S1",
+      "teacher": null,
+      "duration_slots": 1,
+      "min_capacity": 90,
+      "preferred_room_type": "Large"
+    },
+    {
+      "id": 42,
+      "name": "TC S3 - TD",
+      "group": "TC S3",
+      "teacher": "MOHAMMED ECHAIBI",
+      "duration_slots": 1,
+      "min_capacity": 90,
+      "preferred_room_type": "Large"
+    },
+    {
+      "id": 43,
+      "name": "TC GB S3 - TD",
+      "group": "TC GB S3",
+      "teacher": null,
+      "duration_slots": 1,
+      "min_capacity": 90,
+      "preferred_room_type": "Large"
+    },
+    {
+      "id": 44,
+      "name": "TD MTU GB & GEG",
+      "group": "GB & GEG",
+      "teacher": "ABDESAMAD BOUSSALHI",
+      "duration_slots": 1,
+      "min_capacity": 48,
+      "preferred_room_type": "Small"
+    }
+  ],
+  "timeslots": [
+    {
+      "id": 0,
+      "day": "LUNDI",
+      "start": "0.375"
+    },
+    {
+      "id": 1,
+      "day": "LUNDI",
+      "start": "0.458"
+    },
+    {
+      "id": 2,
+      "day": "LUNDI",
+      "start": "0.541"
+    },
+    {
+      "id": 3,
+      "day": "LUNDI",
+      "start": "0.625"
+    },
+    {
+      "id": 4,
+      "day": "LUNDI",
+      "start": "0.708"
+    },
+    {
+      "id": 5,
+      "day": "MARDI",
+      "start": "0.375"
+    },
+    {
+      "id": 6,
+      "day": "MARDI",
+      "start": "0.458"
+    },
+    {
+      "id": 7,
+      "day": "MARDI",
+      "start": "0.541"
+    },
+    {
+      "id": 8,
+      "day": "MARDI",
+      "start": "0.625"
+    },
+    {
+      "id": 9,
+      "day": "MARDI",
+      "start": "0.708"
+    },
+    {
+      "id": 10,
+      "day": "MERCREDI",
+      "start": "0.375"
+    },
+    {
+      "id": 11,
+      "day": "MERCREDI",
+      "start": "0.458"
+    },
+    {
+      "id": 12,
+      "day": "MERCREDI",
+      "start": "0.541"
+    },
+    {
+      "id": 13,
+      "day": "MERCREDI",
+      "start": "0.625"
+    },
+    {
+      "id": 14,
+      "day": "MERCREDI",
+      "start": "0.708"
+    },
+    {
+      "id": 15,
+      "day": "JEUDI",
+      "start": "0.375"
+    },
+    {
+      "id": 16,
+      "day": "JEUDI",
+      "start": "0.458"
+    },
+    {
+      "id": 17,
+      "day": "JEUDI",
+      "start": "0.541"
+    },
+    {
+      "id": 18,
+      "day": "JEUDI",
+      "start": "0.625"
+    },
+    {
+      "id": 19,
+      "day": "JEUDI",
+      "start": "0.708"
+    },
+    {
+      "id": 20,
+      "day": "VENDREDI",
+      "start": "0.375"
+    },
+    {
+      "id": 21,
+      "day": "VENDREDI",
+      "start": "0.458"
+    },
+    {
+      "id": 22,
+      "day": "VENDREDI",
+      "start": "0.541"
+    },
+    {
+      "id": 23,
+      "day": "VENDREDI",
+      "start": "0.625"
+    },
+    {
+      "id": 24,
+      "day": "VENDREDI",
+      "start": "0.708"
+    },
+    {
+      "id": 25,
+      "day": "SAMEDI",
+      "start": "0.375"
+    },
+    {
+      "id": 26,
+      "day": "SAMEDI",
+      "start": "0.458"
+    },
+    {
+      "id": 27,
+      "day": "SAMEDI",
+      "start": "0.541"
+    },
+    {
+      "id": 28,
+      "day": "SAMEDI",
+      "start": "0.625"
+    },
+    {
+      "id": 29,
+      "day": "SAMEDI",
+      "start": "0.708"
+    }
+  ],
+  "rooms": [
+    {
+      "id": 0,
+      "name": "A1",
+      "capacity": 400,
+      "type": "Amphi"
+    },
+    {
+      "id": 1,
+      "name": "A2",
+      "capacity": 400,
+      "type": "Amphi"
+    },
+    {
+      "id": 2,
+      "name": "A4",
+      "capacity": 400,
+      "type": "Amphi"
+    },
+    {
+      "id": 3,
+      "name": "A3",
+      "capacity": 240,
+      "type": "Amphi"
+    },
+    {
+      "id": 4,
+      "name": "S5",
+      "capacity": 48,
+      "type": "Small"
+    },
+    {
+      "id": 5,
+      "name": "S7",
+      "capacity": 48,
+      "type": "Small"
+    },
+    {
+      "id": 6,
+      "name": "S8",
+      "capacity": 48,
+      "type": "Small"
+    },
+    {
+      "id": 7,
+      "name": "S9",
+      "capacity": 48,
+      "type": "Small"
+    },
+    {
+      "id": 8,
+      "name": "S10",
+      "capacity": 48,
+      "type": "Small"
+    },
+    {
+      "id": 9,
+      "name": "S11",
+      "capacity": 48,
+      "type": "Small"
+    },
+    {
+      "id": 10,
+      "name": "S12",
+      "capacity": 48,
+      "type": "Small"
+    },
+    {
+      "id": 11,
+      "name": "S13",
+      "capacity": 48,
+      "type": "Small"
+    },
+    {
+      "id": 12,
+      "name": "S14",
+      "capacity": 48,
+      "type": "Small"
+    },
+    {
+      "id": 13,
+      "name": "S15",
+      "capacity": 48,
+      "type": "Small"
+    },
+    {
+      "id": 14,
+      "name": "S16",
+      "capacity": 48,
+      "type": "Small"
+    },
+    {
+      "id": 15,
+      "name": "S17",
+      "capacity": 48,
+      "type": "Small"
+    },
+    {
+      "id": 16,
+      "name": "S18",
+      "capacity": 48,
+      "type": "Small"
+    },
+    {
+      "id": 17,
+      "name": "S19",
+      "capacity": 48,
+      "type": "Small"
+    },
+    {
+      "id": 18,
+      "name": "S20",
+      "capacity": 48,
+      "type": "Small"
+    },
+    {
+      "id": 19,
+      "name": "S21",
+      "capacity": 48,
+      "type": "Small"
+    },
+    {
+      "id": 20,
+      "name": "S23",
+      "capacity": 90,
+      "type": "Large"
+    },
+    {
+      "id": 21,
+      "name": "S24",
+      "capacity": 90,
+      "type": "Large"
+    },
+    {
+      "id": 22,
+      "name": "S25",
+      "capacity": 90,
+      "type": "Large"
+    },
+    {
+      "id": 23,
+      "name": "S26",
+      "capacity": 90,
+      "type": "Large"
+    },
+    {
+      "id": 24,
+      "name": "S27",
+      "capacity": 90,
+      "type": "Large"
+    },
+    {
+      "id": 25,
+      "name": "S28",
+      "capacity": 90,
+      "type": "Large"
+    },
+    {
+      "id": 26,
+      "name": "S29",
+      "capacity": 90,
+      "type": "Large"
+    },
+    {
+      "id": 27,
+      "name": "S30",
+      "capacity": 90,
+      "type": "Large"
+    },
+    {
+      "id": 28,
+      "name": "GC3",
+      "capacity": 48,
+      "type": "Small"
+    },
+    {
+      "id": 29,
+      "name": "GC2",
+      "capacity": 48,
+      "type": "Small"
+    },
+    {
+      "id": 30,
+      "name": "Ch1",
+      "capacity": 48,
+      "type": "Small"
+    },
+    {
+      "id": 31,
+      "name": "Ch2",
+      "capacity": 48,
+      "type": "Small"
+    },
+    {
+      "id": 32,
+      "name": "G1",
+      "capacity": 48,
+      "type": "Small"
+    },
+    {
+      "id": 33,
+      "name": "G2",
+      "capacity": 48,
+      "type": "Small"
+    }
+  ],
+  "teachers": [
+    "Kzaz",
+    "ELBOUSHAKI",
+    "Bouamama",
+    "rhatay",
+    "MOHSINE HACHKAR",
+    "ABDELGHANI BOUSSAOUD",
+    "ABDENNAIM GALADI",
+    "SAID EL FEZAZI",
+    "BADIA MOUNIR",
+    "KHALIL MOKHLIS",
+    "ABDELLATIF ZOUANA",
+    "ABDALLAH SOULMANI",
+    "AHMED MOKHLIS",
+    "AHMED EL HACHADI",
+    "MOHAMMED KHAYAR",
+    "RKIA EL IDRISSI",
+    "LAILA EL MAZOUZI",
+    "KHALID BENHIDA",
+    "ILHAM MOUNIR",
+    "MOHAMMED ECHAIBI",
+    "ABDESAMAD BOUSSALHI",
+    "FATIMA ZOHRA EL AMRANI",
+    "AHMED BOULAHOUAL",
+    "ABDELHADI DAOU",
+    "ABDELOUAHAD BAYAR",
+    "SMAIL DRIBI ALAOUI",
+    "ABDESAMAD BENSERHIR",
+    "NAJIB BOUMAAZ",
+    "SAID EL ABDELLAOUI",
+    "MOHAMED ESSALIH",
+    "JAMAL BAKKAS",
+    "AHMED KADIRI",
+    "ABDELLATIF EL-AZOUZI",
+    "OTHMANE ALAOUI FDILI"
+  ],
+  "groups": [
+    {
+      "name": "BA",
+      "size": 50
+    },
+    {
+      "name": "BA/BP",
+      "size": 50
+    },
+    {
+      "name": "CI",
+      "size": 48
+    },
+    {
+      "name": "EE+GARM",
+      "size": 48
+    },
+    {
+      "name": "ERME",
+      "size": 48
+    },
+    {
+      "name": "GB & GEG",
+      "size": 48
+    },
+    {
+      "name": "GC",
+      "size": 48
+    },
+    {
+      "name": "IEEA",
+      "size": 48
+    },
+    {
+      "name": "IEGS",
+      "size": 48
+    },
+    {
+      "name": "IFA",
+      "size": 48
+    },
+    {
+      "name": "MASTER S1 RD",
+      "size": 48
+    },
+    {
+      "name": "MIASI",
+      "size": 48
+    },
+    {
+      "name": "MST RD",
+      "size": 48
+    },
+    {
+      "name": "MTU",
+      "size": 48
+    },
+    {
+      "name": "Master IAII",
+      "size": 48
+    },
+    {
+      "name": "SIR",
+      "size": 48
+    },
+    {
+      "name": "SIT",
+      "size": 48
+    },
+    {
+      "name": "TC GB S3",
+      "size": 50
+    },
+    {
+      "name": "TC S1",
+      "size": 50
+    },
+    {
+      "name": "TC S1 GB & GEG",
+      "size": 50
+    },
+    {
+      "name": "TC S1 GB GEG",
+      "size": 50
+    },
+    {
+      "name": "TC S3",
+      "size": 50
+    }
+  ]
+}
