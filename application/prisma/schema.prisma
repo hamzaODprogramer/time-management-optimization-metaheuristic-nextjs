@@ -1,0 +1,102 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id        Int     @id @default(autoincrement())
+  email     String  @unique
+  passwordHash String  @map("password_hash")
+  name      String
+  role      String  @default("admin")
+  createdAt DateTime @default(now()) @map("created_at")
+
+  @@map("users")
+}
+
+model Group {
+  id        Int     @id @default(autoincrement())
+  name      String  @unique
+  size      Int
+  createdAt DateTime @default(now()) @map("created_at")
+
+  courses Course[]
+
+  @@map("groups")
+}
+
+model Teacher {
+  id        Int     @id @default(autoincrement())
+  name      String  @unique
+  email     String?
+  phone     String?
+  createdAt DateTime @default(now()) @map("created_at")
+
+  courses Course[]
+
+  @@map("teachers")
+}
+
+model Room {
+  id        Int     @id @default(autoincrement())
+  name      String  @unique
+  capacity  Int
+  type      String
+  createdAt DateTime @default(now()) @map("created_at")
+
+  scheduleItems ScheduleItem[]
+
+  @@map("rooms")
+}
+
+model Timeslot {
+  id        Int     @id @default(autoincrement())
+  day       String
+  startTime String  @map("start_time")
+  endTime   String  @map("end_time")
+  createdAt DateTime @default(now()) @map("created_at")
+
+  scheduleItems ScheduleItem[]
+
+  @@map("timeslots")
+}
+
+model Course {
+  id               Int     @id @default(autoincrement())
+  name             String
+  groupId          Int     @map("group_id")
+  teacherId        Int?    @map("teacher_id")
+  durationSlots    Int     @default(1) @map("duration_slots")
+  minCapacity      Int     @map("min_capacity")
+  preferredRoomType String? @map("preferred_room_type")
+  createdAt        DateTime @default(now()) @map("created_at")
+
+  group    Group  @relation(fields: [groupId], references: [id], onDelete: Cascade)
+  teacher  Teacher? @relation(fields: [teacherId], references: [id], onDelete: SetNull)
+  scheduleItems ScheduleItem[]
+
+  @@map("courses")
+}
+
+model ScheduleItem {
+  id        Int     @id @default(autoincrement())
+  courseId  Int     @map("course_id")
+  roomId    Int     @map("room_id")
+  timeslotId Int    @map("timeslot_id")
+  createdAt DateTime @default(now()) @map("created_at")
+  updatedAt DateTime @updatedAt @map("updated_at")
+
+  course   Course  @relation(fields: [courseId], references: [id], onDelete: Cascade)
+  room     Room    @relation(fields: [roomId], references: [id], onDelete: Cascade)
+  timeslot Timeslot @relation(fields: [timeslotId], references: [id], onDelete: Cascade)
+
+  @@unique([courseId, timeslotId])
+  @@map("schedule")
+}
