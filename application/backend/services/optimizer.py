@@ -4,6 +4,12 @@ import random
 import math
 import copy
 from collections import defaultdict
+import sys
+import io
+
+# Force UTF-8 encoding for stdout/stderr
+sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf-8')
+sys.stderr = io.TextIOWrapper(sys.stderr.buffer, encoding='utf-8')
 
 # Algorithm parameters (from research paper)
 MAX_ITER = 10000  # Maximum iterations for SA
@@ -202,7 +208,7 @@ class OptimizationService:
         
         if debug:
             hard_satisfied = sum(hard_violations.values()) == 0
-            print(f"Breakdown: Hard={'✓ 0' if hard_satisfied else f'✗ {sum(hard_violations.values())}'} {hard_violations}, Soft={soft_violations['gaps']:.0f} gaps + {soft_violations['variance']:.1f} var = {total_fitness:.1f}")
+            # print(f"Breakdown: Hard={'OK 0' if hard_satisfied else f'X {sum(hard_violations.values())}'} {hard_violations}, Soft={soft_violations['gaps']:.0f} gaps + {soft_violations['variance']:.1f} var = {total_fitness:.1f}")
         
         return total_fitness
     

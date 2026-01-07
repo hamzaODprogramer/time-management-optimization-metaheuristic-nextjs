@@ -69,7 +69,7 @@ def verify_schedule():
             "fitness": round(fitness_score, 2),
             "violations": violations,
             "statistics": stats,
-            "message": "Schedule is valid! ✓" if is_valid else f"Schedule has {total_hard_violations} hard constraint violations"
+            "message": "Schedule is valid! OK" if is_valid else f"Schedule has {total_hard_violations} hard constraint violations"
         }), 200
         
     except Exception as e:
