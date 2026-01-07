@@ -46,48 +46,48 @@ class OptimizationService:
     def load_instance(self):
         """Load all data from database into memory for fast access"""
         try:
-            # Load courses as events
+            # Load courses as events (use snake_case column names)
             self.cursor.execute("""
-                SELECT id, name, teacherId, groupId, minCapacity, 
-                       preferredRoomType FROM Course
+                SELECT id, name, teacher_id, group_id, min_capacity, 
+                       preferred_room_type FROM courses
             """)
             courses = self.cursor.fetchall()
             for course in courses:
                 self.events[course['id']] = {
                     'id': course['id'],
                     'name': course['name'],
-                    'teacher': course['teacherId'],
-                    'group': course['groupId'],
-                    'min_capacity': course['minCapacity'],
-                    'preferred_room_type': course['preferredRoomType'] or 'Any'
+                    'teacher': course.get('teacher_id'),
+                    'group': course.get('group_id'),
+                    'min_capacity': course.get('min_capacity', 0),
+                    'preferred_room_type': course.get('preferred_room_type') or 'Any'
                 }
-                if course['teacherId']:
-                    self.teachers.add(course['teacherId'])
+                if course.get('teacher_id'):
+                    self.teachers.add(course['teacher_id'])
             
             # Load timeslots
-            self.cursor.execute("SELECT id, day, startTime, endTime FROM Timeslot")
+            self.cursor.execute("SELECT id, day, start_time, end_time FROM timeslots")
             for ts in self.cursor.fetchall():
                 self.timeslots[ts['id']] = {
                     'id': ts['id'],
                     'day': ts['day'],
-                    'start': str(ts['startTime']),
-                    'end': str(ts['endTime'])
+                    'start': str(ts.get('start_time')),
+                    'end': str(ts.get('end_time'))
                 }
             
             # Load rooms
-            self.cursor.execute("SELECT id, name, capacity, type FROM Room")
+            self.cursor.execute("SELECT id, name, capacity, type FROM rooms")
             for room in self.cursor.fetchall():
                 self.rooms[room['id']] = {
                     'id': room['id'],
                     'name': room['name'],
-                    'capacity': room['capacity'],
-                    'type': room['type']
+                    'capacity': room.get('capacity', 0),
+                    'type': room.get('type')
                 }
             
             # Load groups
-            self.cursor.execute("SELECT id, name FROM `Group`")
+            self.cursor.execute("SELECT id, name FROM groups")
             for group in self.cursor.fetchall():
-                self.groups[group['name']] = {
+                self.groups[group['id']] = {
                     'name': group['name'],
                     'id': group['id']
                 }
@@ -394,14 +394,14 @@ class OptimizationService:
     def save_solution_to_db(self, solution):
         """Save optimized solution to database"""
         try:
-            # Clear existing schedule
-            self.cursor.execute("DELETE FROM ScheduleItem")
+            # Clear existing schedule (use actual table name and snake_case columns)
+            self.cursor.execute("DELETE FROM schedule")
             self.connection.commit()
             
             # Insert new schedule
             for event_id, assign in solution.items():
                 self.cursor.execute("""
-                    INSERT INTO ScheduleItem (courseId, roomId, timeslotId)
+                    INSERT INTO schedule (course_id, room_id, timeslot_id)
                     VALUES (%s, %s, %s)
                 """, (event_id, assign['r'], assign['t']))
             

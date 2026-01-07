@@ -3,7 +3,7 @@
  * Run with: npx ts-node scripts/seed-database.ts
  */
 
-import { getDB, initializeDatabase } from "../lib/db"
+import { getDB, initializeDatabase } from "../lib/db.ts"
 
 const sampleData = {
   groups: [

@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { OptimizeButton } from "@/components/optimize-button"
+import { VerificationPanel } from "@/components/verification-panel"
 
 export default function Dashboard() {
   const [stats, setStats] = useState({
@@ -84,7 +85,7 @@ export default function Dashboard() {
         </div>
 
         {/* Action Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-8">
           <Card>
             <CardHeader>
               <CardTitle>Generate Optimized Schedule</CardTitle>
@@ -109,6 +110,9 @@ export default function Dashboard() {
             </CardContent>
           </Card>
         </div>
+
+        {/* Verification Panel */}
+        <VerificationPanel />
       </div>
     </div>
   )

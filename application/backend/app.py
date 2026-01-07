@@ -4,6 +4,7 @@ import os
 from dotenv import load_dotenv
 from routes.optimize import optimize_bp
 from routes.health import health_bp
+from routes.verify import verify_bp
 
 load_dotenv()
 
@@ -13,6 +14,7 @@ CORS(app)
 # Register blueprints
 app.register_blueprint(health_bp)
 app.register_blueprint(optimize_bp)
+app.register_blueprint(verify_bp)
 
 @app.errorhandler(404)
 def not_found(error):

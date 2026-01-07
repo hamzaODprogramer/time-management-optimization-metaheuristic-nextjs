@@ -22,6 +22,9 @@ export async function GET() {
       orderBy: { name: "asc" },
     })
 
+    // also fetch timeslots to let client build a full grid
+    const timeslots = await prisma.timeslot.findMany({ orderBy: [{ day: "asc" }, { startTime: "asc" }] })
+
     const transformedSchedule = scheduleItems.map((item) => ({
       id: item.id,
       course: item.course.name,
@@ -36,6 +39,7 @@ export async function GET() {
     return NextResponse.json({
       schedule: transformedSchedule,
       groups: groups.map((g) => g.name),
+      timeslots: timeslots.map((t) => ({ day: t.day, start: t.startTime, end: t.endTime })),
     })
   } catch (error) {
     console.error("Schedule fetch error:", error)
