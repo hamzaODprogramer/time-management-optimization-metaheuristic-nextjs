@@ -15,7 +15,7 @@ interface ScheduleItem {
 
 interface DaySchedule {
   day: string
-  slots: ScheduleItem[][] // Array of arrays - multiple courses per time slot
+  slots: (ScheduleItem | null)[]
 }
 
 export default function SchedulePage() {
@@ -48,6 +48,7 @@ export default function SchedulePage() {
           // Prefer explicit timeslots returned by the API (full set), otherwise derive from schedule
           let slots: { start: string; time: string }[] = []
           if (Array.isArray(data.timeslots) && data.timeslots.length > 0) {
+            // use API timeslots (day-aware); but client grid expects per-day slots, so keep start+time
             const uniqueStarts = Array.from(
               new Set(data.timeslots.map((t: any) => (t.start || "").slice(0, 5)))
             ).filter(Boolean)
@@ -66,13 +67,13 @@ export default function SchedulePage() {
 
           setTimeSlots(slots)
 
-          // Build empty grid: for each day and timeslot, create array for multiple courses
+          // Build empty grid: for each day and computed timeslot, default null
           const grid: DaySchedule[] = daysDb.map((day) => ({
             day: dayLabels[day] || day,
-            slots: slots.map(() => []), // Array of empty arrays for each slot
+            slots: slots.map(() => null),
           }))
 
-            // Place items into grid - can have multiple courses per (day,time)
+            // Place items into grid by matching day and start time (first 5 chars)
             ; (data.schedule || []).forEach((item: any) => {
               const dayIndex = daysDb.indexOf(item.day)
               if (dayIndex === -1) return
@@ -81,8 +82,7 @@ export default function SchedulePage() {
               const slotIndex = slots.findIndex((ts) => ts.start === itemStart)
               if (slotIndex === -1) return
 
-              // Add to the array (not replace)
-              grid[dayIndex].slots[slotIndex].push({
+              grid[dayIndex].slots[slotIndex] = {
                 id: item.id,
                 course: item.course,
                 teacher: item.teacher,
@@ -90,7 +90,7 @@ export default function SchedulePage() {
                 group: item.groupName,
                 startTime: item.startTime,
                 endTime: item.endTime,
-              })
+              }
             })
 
           setSchedule(grid)
@@ -105,16 +105,6 @@ export default function SchedulePage() {
 
     fetchSchedule()
   }, [])
-
-  // Filter by selected group
-  const filteredSchedule = selectedGroup === "all"
-    ? schedule
-    : schedule.map(day => ({
-      ...day,
-      slots: day.slots.map(slotItems =>
-        slotItems.filter(item => item.group === selectedGroup)
-      )
-    }))
 
   return (
     <div className="p-8">
@@ -195,33 +185,18 @@ export default function SchedulePage() {
                       {timeSlot.time}
                     </td>
                     {daysDb.map((day, dayIndex) => {
-                      const cellItems = filteredSchedule[dayIndex]?.slots[slotIndex] || []
-
+                      const cell = schedule[dayIndex]?.slots[slotIndex] || null
                       return (
-                        <td key={`${day}-${slotIndex}`} className="p-2 border-l border-border min-w-[200px] align-top">
-                          {cellItems.length > 0 ? (
-                            <div className="space-y-2">
-                              {cellItems.map((cell, idx) => (
-                                <div
-                                  key={`${cell.id}-${idx}`}
-                                  className="bg-primary/5 rounded-lg p-3 border border-border hover:border-primary/30 transition-colors"
-                                >
-                                  <div className="text-sm font-semibold">{cell.course}</div>
-                                  <div className="text-xs text-muted-foreground">
-                                    👨‍🏫 {cell.teacher}
-                                  </div>
-                                  <div className="text-xs text-muted-foreground">
-                                    🏛️ {cell.room}
-                                  </div>
-                                  <div className="text-xs text-muted-foreground">
-                                    👥 {cell.group}
-                                  </div>
-                                </div>
-                              ))}
+                        <td key={`${day}-${slotIndex}`} className="p-2 border-l border-border min-w-[200px] h-24 align-top">
+                          {cell ? (
+                            <div className="bg-primary/5 rounded-lg p-3 h-full border border-border hover:border-primary/30 transition-colors">
+                              <div className="text-sm font-semibold">{cell.course}</div>
+                              <div className="text-xs text-muted-foreground">{cell.teacher} • {cell.room}</div>
+                              <div className="text-xs text-muted-foreground">{cell.group}</div>
                             </div>
                           ) : (
-                            <div className="h-24 flex items-center justify-center">
-                              <p className="text-xs text-muted-foreground">No class scheduled</p>
+                            <div className="bg-primary/5 rounded-lg p-3 h-full border border-border hover:border-primary/30 transition-colors">
+                              <p className="text-xs text-muted-foreground text-center py-6">No class scheduled</p>
                             </div>
                           )}
                         </td>
