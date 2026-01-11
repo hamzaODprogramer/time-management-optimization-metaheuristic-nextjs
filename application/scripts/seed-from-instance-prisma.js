@@ -1,5 +1,5 @@
 /**
- * Seed script to populate MySQL database with data from instance_fstmv3.json
+ * Seed script to populate MySQL database with data from instance_fstmv5.json
  * Uses Prisma for MySQL connection
  * Run with: node scripts/seed-from-instance-prisma.js
  */
@@ -10,53 +10,9 @@ const path = require("path")
 
 const prisma = new PrismaClient()
 
-// Load data from instance_fstmv3.json
-const instancePath = path.join(process.cwd(), "instance_fstmv3.json")
+// Load data from instance_fstmv5.json
+const instancePath = path.join(process.cwd(), "instance_fstmv5.json")
 const instanceData = JSON.parse(fs.readFileSync(instancePath, "utf-8"))
-
-// Define timeslots based on standard academic schedule
-const timeslots = [
-    // Lundi
-    { day: "Monday", start_time: "08:30", end_time: "09:00" },
-    { day: "Monday", start_time: "09:00", end_time: "10:00" },
-    { day: "Monday", start_time: "10:00", end_time: "10:30" },
-    { day: "Monday", start_time: "10:30", end_time: "11:00" },
-    { day: "Monday", start_time: "11:00", end_time: "11:30" },
-    { day: "Monday", start_time: "11:30", end_time: "12:00" },
-    { day: "Monday", start_time: "12:00", end_time: "12:30" },
-    { day: "Monday", start_time: "12:30", end_time: "13:00" },
-    { day: "Monday", start_time: "13:00", end_time: "13:30" },
-    { day: "Monday", start_time: "13:30", end_time: "14:00" },
-    { day: "Monday", start_time: "14:00", end_time: "14:30" },
-    { day: "Monday", start_time: "14:30", end_time: "15:00" },
-    { day: "Monday", start_time: "15:00", end_time: "15:30" },
-    { day: "Monday", start_time: "15:30", end_time: "16:00" },
-    { day: "Monday", start_time: "16:00", end_time: "16:30" },
-    { day: "Monday", start_time: "16:30", end_time: "17:00" },
-    { day: "Monday", start_time: "17:00", end_time: "17:30" },
-    { day: "Monday", start_time: "17:30", end_time: "18:00" },
-    // Repeat for other days...
-    { day: "Tuesday", start_time: "08:30", end_time: "09:00" },
-    { day: "Tuesday", start_time: "09:00", end_time: "10:00" },
-    { day: "Tuesday", start_time: "10:00", end_time: "10:30" },
-    { day: "Tuesday", start_time: "10:30", end_time: "11:00" },
-    { day: "Tuesday", start_time: "11:00", end_time: "11:30" },
-    { day: "Tuesday", start_time: "11:30", end_time: "12:00" },
-    { day: "Tuesday", start_time: "12:00", end_time: "12:30" },
-    { day: "Tuesday", start_time: "12:30", end_time: "13:00" },
-    { day: "Tuesday", start_time: "13:00", end_time: "13:30" },
-    { day: "Tuesday", start_time: "13:30", end_time: "14:00" },
-    { day: "Tuesday", start_time: "14:00", end_time: "14:30" },
-    { day: "Tuesday", start_time: "14:30", end_time: "15:00" },
-    { day: "Tuesday", start_time: "15:00", end_time: "15:30" },
-    { day: "Tuesday", start_time: "15:30", end_time: "16:00" },
-    { day: "Tuesday", start_time: "16:00", end_time: "16:30" },
-    { day: "Tuesday", start_time: "16:30", end_time: "17:00" },
-    { day: "Tuesday", start_time: "17:00", end_time: "17:30" },
-    { day: "Tuesday", start_time: "17:30", end_time: "18:00" },
-    // Continue for other days - abbreviated for brevity
-    // You can add Wednesday-Saturday following the same pattern
-]
 
 // Generate all timeslots for all days
 const days = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]
@@ -78,7 +34,7 @@ for (const day of days) {
 }
 
 async function seed() {
-    console.log("🌱 Initializing MySQL database from instance_fstmv3.json...")
+    console.log("🌱 Initializing MySQL database from instance_fstmv5.json...")
 
     try {
         // Clear existing data (in reverse order of dependencies)
@@ -102,11 +58,11 @@ async function seed() {
         })
         console.log(`✓ Added ${groupResults.count} groups`)
 
-        // Seed teachers
+        // Seed teachers - FIX: Extract just the name string from teacher objects
         console.log("👨‍🏫 Seeding teachers from instance file...")
         const teacherResults = await prisma.teacher.createMany({
             data: instanceData.teachers.map(t => ({
-                name: t
+                name: t.name  // Extract the name property from the teacher object
             })),
             skipDuplicates: true
         })
@@ -144,12 +100,22 @@ async function seed() {
 
         let coursesAdded = 0
         for (const event of instanceData.events) {
-            const groupId = groupMap.get(event.group)
-            const teacherId = teacherMap.get(event.teacher)
-
-            if (!groupId) {
-                console.warn(`⚠ Warning: Group "${event.group}" not found for event "${event.name}"`)
+            // Find group by name
+            const group = instanceData.groups.find(g => g.id === event.group_id)
+            if (!group) {
+                console.warn(`⚠ Warning: Group with id "${event.group_id}" not found for event "${event.name}"`)
                 continue
+            }
+
+            const groupId = groupMap.get(group.name)
+            
+            // Find teacher by name
+            let teacherId = null
+            if (event.teacher_id !== null && event.teacher_id !== undefined) {
+                const teacher = instanceData.teachers.find(t => t.id === event.teacher_id)
+                if (teacher) {
+                    teacherId = teacherMap.get(teacher.name)
+                }
             }
 
             await prisma.course.create({
@@ -166,7 +132,7 @@ async function seed() {
         }
         console.log(`✓ Added ${coursesAdded} courses`)
 
-        console.log("\n✨ MySQL database seeded successfully from instance_fstmv3.json!")
+        console.log("\n✨ MySQL database seeded successfully from instance_fstmv5.json!")
         console.log("\n🎯 Next steps:")
         console.log("1. Start your application: npm run dev")
         console.log("2. Login with admin account")

@@ -1,0 +1,1411 @@
+{
+  "metadata": {
+    "institution": "Faculty of Sciences and Techniques of Marrakech (FSTM)",
+    "academic_year": "2025-2026",
+    "semester": "Autumn",
+    "generated_by": "Compatible Instance Generator v2.0",
+    "generation_date": "2026-01-11",
+    "days": [
+      "Monday",
+      "Tuesday",
+      "Wednesday",
+      "Thursday",
+      "Friday",
+      "Saturday"
+    ],
+    "slots_per_day": 4,
+    "slot_descriptions": [
+      "08:30-10:25",
+      "10:30-12:25",
+      "14:30-16:25",
+      "16:35-18:30"
+    ],
+    "notes": "This instance reconciles JSON data with occupation document constraints"
+  },
+
+  "rooms": [
+    {
+      "id": 0,
+      "name": "Amphi A1",
+      "capacity": 400,
+      "type": "Amphi",
+      "building": "Main"
+    },
+    {
+      "id": 1,
+      "name": "Amphi A2",
+      "capacity": 400,
+      "type": "Amphi",
+      "building": "Main"
+    },
+    {
+      "id": 2,
+      "name": "Amphi A3",
+      "capacity": 240,
+      "type": "Amphi",
+      "building": "Main"
+    },
+    {
+      "id": 3,
+      "name": "Amphi A4",
+      "capacity": 400,
+      "type": "Amphi",
+      "building": "Main"
+    },
+
+    {
+      "id": 4,
+      "name": "Large S23",
+      "capacity": 90,
+      "type": "Large",
+      "building": "Main"
+    },
+    {
+      "id": 5,
+      "name": "Large S24",
+      "capacity": 90,
+      "type": "Large",
+      "building": "Main"
+    },
+    {
+      "id": 6,
+      "name": "Large S25",
+      "capacity": 90,
+      "type": "Large",
+      "building": "Main"
+    },
+    {
+      "id": 7,
+      "name": "Large S26",
+      "capacity": 90,
+      "type": "Large",
+      "building": "Main"
+    },
+    {
+      "id": 8,
+      "name": "Large S27",
+      "capacity": 90,
+      "type": "Large",
+      "building": "Annex"
+    },
+    {
+      "id": 9,
+      "name": "Large S28",
+      "capacity": 90,
+      "type": "Large",
+      "building": "Annex"
+    },
+    {
+      "id": 10,
+      "name": "Large S29",
+      "capacity": 90,
+      "type": "Large",
+      "building": "Annex"
+    },
+    {
+      "id": 11,
+      "name": "Large S30",
+      "capacity": 90,
+      "type": "Large",
+      "building": "Annex"
+    },
+
+    {
+      "id": 12,
+      "name": "Small S5",
+      "capacity": 48,
+      "type": "Small",
+      "building": "Main"
+    },
+    {
+      "id": 13,
+      "name": "Small S7",
+      "capacity": 48,
+      "type": "Small",
+      "building": "Main"
+    },
+    {
+      "id": 14,
+      "name": "Small S8",
+      "capacity": 48,
+      "type": "Small",
+      "building": "Main"
+    },
+    {
+      "id": 15,
+      "name": "Small S9",
+      "capacity": 48,
+      "type": "Small",
+      "building": "Main"
+    },
+    {
+      "id": 16,
+      "name": "Small S10",
+      "capacity": 48,
+      "type": "Small",
+      "building": "Main"
+    },
+    {
+      "id": 17,
+      "name": "Small S11",
+      "capacity": 48,
+      "type": "Small",
+      "building": "Main"
+    },
+    {
+      "id": 18,
+      "name": "Small S12",
+      "capacity": 48,
+      "type": "Small",
+      "building": "Main"
+    },
+    {
+      "id": 19,
+      "name": "Small S13",
+      "capacity": 48,
+      "type": "Small",
+      "building": "Main"
+    },
+    {
+      "id": 20,
+      "name": "Small S14",
+      "capacity": 48,
+      "type": "Small",
+      "building": "Annex"
+    },
+    {
+      "id": 21,
+      "name": "Small S15",
+      "capacity": 48,
+      "type": "Small",
+      "building": "Annex"
+    },
+    {
+      "id": 22,
+      "name": "Small S16",
+      "capacity": 48,
+      "type": "Small",
+      "building": "Annex"
+    },
+    {
+      "id": 23,
+      "name": "Small S17",
+      "capacity": 48,
+      "type": "Small",
+      "building": "Annex"
+    },
+    {
+      "id": 24,
+      "name": "Small S18",
+      "capacity": 48,
+      "type": "Small",
+      "building": "Annex"
+    },
+    {
+      "id": 25,
+      "name": "Small S19",
+      "capacity": 48,
+      "type": "Small",
+      "building": "Annex"
+    },
+    {
+      "id": 26,
+      "name": "Small S20",
+      "capacity": 48,
+      "type": "Small",
+      "building": "Annex"
+    },
+    {
+      "id": 27,
+      "name": "Small S21",
+      "capacity": 48,
+      "type": "Small",
+      "building": "Annex"
+    },
+
+    {
+      "id": 28,
+      "name": "Lab GC2",
+      "capacity": 48,
+      "type": "Lab",
+      "building": "Engineering"
+    },
+    {
+      "id": 29,
+      "name": "Lab GC3",
+      "capacity": 48,
+      "type": "Lab",
+      "building": "Engineering"
+    },
+    {
+      "id": 30,
+      "name": "Lab Ch1",
+      "capacity": 48,
+      "type": "Lab",
+      "building": "Chemistry"
+    },
+    {
+      "id": 31,
+      "name": "Lab Ch2",
+      "capacity": 48,
+      "type": "Lab",
+      "building": "Chemistry"
+    },
+    {
+      "id": 32,
+      "name": "Lab G1",
+      "capacity": 48,
+      "type": "Lab",
+      "building": "Biology"
+    },
+    {
+      "id": 33,
+      "name": "Lab G2",
+      "capacity": 48,
+      "type": "Lab",
+      "building": "Biology"
+    }
+  ],
+
+  "teachers": [
+    { "id": 0, "name": "Prof. MOHSINE HACHKAR", "department": "Mathematics" },
+    { "id": 1, "name": "Prof. ABDELGHANI BOUSSAOUD", "department": "Physics" },
+    {
+      "id": 2,
+      "name": "Prof. ABDENNAIM GALADI",
+      "department": "Electrical Engineering"
+    },
+    {
+      "id": 3,
+      "name": "Prof. SAID EL FEZAZI",
+      "department": "Computer Networks"
+    },
+    { "id": 4, "name": "Prof. BADIA MOUNIR", "department": "Chemistry" },
+    {
+      "id": 5,
+      "name": "Prof. KHALIL MOKHLIS",
+      "department": "Computer Science"
+    },
+    { "id": 6, "name": "Prof. ABDELLATIF ZOUANA", "department": "Languages" },
+    {
+      "id": 7,
+      "name": "Prof. ABDALLAH SOULMANI",
+      "department": "AI & Data Science"
+    },
+    { "id": 8, "name": "Prof. RKIA EL IDRISSI", "department": "Geology" },
+    { "id": 9, "name": "Prof. LAILA EL MAZOUZI", "department": "Biology" },
+    {
+      "id": 10,
+      "name": "Prof. OTHMANE ALAOUI FDILI",
+      "department": "Civil Engineering"
+    },
+    {
+      "id": 11,
+      "name": "Prof. SAID EL ABDELLAOUI",
+      "department": "Automation"
+    },
+    { "id": 12, "name": "Prof. NAJIB BOUMAAZ", "department": "Management" },
+    {
+      "id": 13,
+      "name": "Prof. ABDELLATIF EL-AZOUZI",
+      "department": "Networks"
+    },
+    { "id": 14, "name": "Prof. KZAZ MOHAMED", "department": "Mathematics" },
+    {
+      "id": 15,
+      "name": "Prof. ELBOUSHAKI AHMED",
+      "department": "Computer Science"
+    },
+    { "id": 16, "name": "Prof. BOUAMAMA HASSAN", "department": "Biochemistry" },
+    { "id": 17, "name": "Prof. RHATAY KARIM", "department": "MTU" },
+    {
+      "id": 18,
+      "name": "Prof. AZIZ OUAARAB",
+      "department": "Computer Science"
+    },
+    {
+      "id": 19,
+      "name": "Prof. YOUSSEF FAKHRI",
+      "department": "Operations Research"
+    }
+  ],
+
+  "groups": [
+    {
+      "id": 0,
+      "name": "TC S1",
+      "size": 400,
+      "level": "Common Core",
+      "semester": 1
+    },
+    {
+      "id": 1,
+      "name": "TC S3",
+      "size": 380,
+      "level": "Common Core",
+      "semester": 3
+    },
+    {
+      "id": 2,
+      "name": "TC GB S3",
+      "size": 50,
+      "level": "Common Core Biology",
+      "semester": 3
+    },
+    {
+      "id": 3,
+      "name": "TC S1 GB&GEG",
+      "size": 50,
+      "level": "Common Core",
+      "semester": 1
+    },
+
+    {
+      "id": 4,
+      "name": "CI GI",
+      "size": 45,
+      "level": "Engineering",
+      "semester": 5
+    },
+    {
+      "id": 5,
+      "name": "CI GP",
+      "size": 45,
+      "level": "Engineering",
+      "semester": 5
+    },
+    {
+      "id": 6,
+      "name": "CI GEE",
+      "size": 40,
+      "level": "Engineering",
+      "semester": 5
+    },
+    {
+      "id": 7,
+      "name": "CI GC",
+      "size": 40,
+      "level": "Engineering",
+      "semester": 5
+    },
+
+    {
+      "id": 8,
+      "name": "IEEA",
+      "size": 48,
+      "level": "Engineering",
+      "semester": 7
+    },
+    {
+      "id": 9,
+      "name": "IEGS",
+      "size": 48,
+      "level": "Engineering",
+      "semester": 7
+    },
+    {
+      "id": 10,
+      "name": "IFA",
+      "size": 48,
+      "level": "Engineering",
+      "semester": 7
+    },
+    {
+      "id": 11,
+      "name": "MIASI",
+      "size": 48,
+      "level": "Engineering",
+      "semester": 7
+    },
+    {
+      "id": 12,
+      "name": "GC",
+      "size": 48,
+      "level": "Engineering",
+      "semester": 7
+    },
+    {
+      "id": 13,
+      "name": "EE+GARM",
+      "size": 48,
+      "level": "Engineering",
+      "semester": 7
+    },
+    {
+      "id": 14,
+      "name": "SIR",
+      "size": 48,
+      "level": "Engineering",
+      "semester": 7
+    },
+    {
+      "id": 15,
+      "name": "ERME",
+      "size": 48,
+      "level": "Engineering",
+      "semester": 7
+    },
+
+    {
+      "id": 16,
+      "name": "Master IAII",
+      "size": 25,
+      "level": "Master",
+      "semester": 1
+    },
+    {
+      "id": 17,
+      "name": "MST RD",
+      "size": 30,
+      "level": "Master",
+      "semester": 1
+    },
+    {
+      "id": 18,
+      "name": "MST GE",
+      "size": 28,
+      "level": "Master",
+      "semester": 1
+    },
+
+    { "id": 19, "name": "BA", "size": 60, "level": "License", "semester": 5 },
+    { "id": 20, "name": "BP", "size": 55, "level": "License", "semester": 5 }
+  ],
+
+  "events": [
+    {
+      "id": 0,
+      "name": "TC S1 - Analyse 1",
+      "group_id": 0,
+      "teacher_id": 0,
+      "duration_slots": 1,
+      "min_capacity": 400,
+      "preferred_room_type": "Amphi",
+      "weekly_frequency": 2,
+      "is_exam": false
+    },
+    {
+      "id": 1,
+      "name": "TC S1 - Algèbre 1",
+      "group_id": 0,
+      "teacher_id": 14,
+      "duration_slots": 1,
+      "min_capacity": 420,
+      "preferred_room_type": "Amphi",
+      "weekly_frequency": 2,
+      "is_exam": false
+    },
+    {
+      "id": 2,
+      "name": "TC S1 - Physique 1",
+      "group_id": 0,
+      "teacher_id": 1,
+      "duration_slots": 1,
+      "min_capacity": 420,
+      "preferred_room_type": "Amphi",
+      "weekly_frequency": 2,
+      "is_exam": false
+    },
+    {
+      "id": 3,
+      "name": "TC S1 - Informatique",
+      "group_id": 0,
+      "teacher_id": 15,
+      "duration_slots": 1,
+      "min_capacity": 420,
+      "preferred_room_type": "Amphi",
+      "weekly_frequency": 1,
+      "is_exam": false
+    },
+    {
+      "id": 4,
+      "name": "TC S1 - Anglais",
+      "group_id": 0,
+      "teacher_id": 6,
+      "duration_slots": 1,
+      "min_capacity": 90,
+      "preferred_room_type": "Large",
+      "weekly_frequency": 1,
+      "is_exam": false
+    },
+    {
+      "id": 5,
+      "name": "TC S3 - Analyse 3",
+      "group_id": 1,
+      "teacher_id": 0,
+      "duration_slots": 1,
+      "min_capacity": 380,
+      "preferred_room_type": "Amphi",
+      "weekly_frequency": 2,
+      "is_exam": false
+    },
+    {
+      "id": 6,
+      "name": "TC S3 - Thermodynamique",
+      "group_id": 1,
+      "teacher_id": 1,
+      "duration_slots": 1,
+      "min_capacity": 380,
+      "preferred_room_type": "Amphi",
+      "weekly_frequency": 2,
+      "is_exam": false
+    },
+    {
+      "id": 7,
+      "name": "TC S3 - Électromagnétisme",
+      "group_id": 1,
+      "teacher_id": 2,
+      "duration_slots": 1,
+      "min_capacity": 380,
+      "preferred_room_type": "Amphi",
+      "weekly_frequency": 1,
+      "is_exam": false
+    },
+    {
+      "id": 8,
+      "name": "TC S3 - Français",
+      "group_id": 1,
+      "teacher_id": 6,
+      "duration_slots": 1,
+      "min_capacity": 90,
+      "preferred_room_type": "Large",
+      "weekly_frequency": 1,
+      "is_exam": false
+    },
+    {
+      "id": 9,
+      "name": "TC GB S3 - Biochimie",
+      "group_id": 2,
+      "teacher_id": 16,
+      "duration_slots": 1,
+      "min_capacity": 50,
+      "preferred_room_type": "Small",
+      "weekly_frequency": 2,
+      "is_exam": false
+    },
+    {
+      "id": 10,
+      "name": "TC GB S3 - Biologie Cellulaire",
+      "group_id": 2,
+      "teacher_id": 9,
+      "duration_slots": 1,
+      "min_capacity": 50,
+      "preferred_room_type": "Small",
+      "weekly_frequency": 2,
+      "is_exam": false
+    },
+    {
+      "id": 11,
+      "name": "TC GB S3 - TP Biologie",
+      "group_id": 2,
+      "teacher_id": 16,
+      "duration_slots": 2,
+      "min_capacity": 48,
+      "preferred_room_type": "Lab",
+      "weekly_frequency": 1,
+      "is_exam": false
+    },
+    {
+      "id": 12,
+      "name": "TC S1 GB&GEG - Chimie Générale",
+      "group_id": 3,
+      "teacher_id": 4,
+      "duration_slots": 1,
+      "min_capacity": 50,
+      "preferred_room_type": "Small",
+      "weekly_frequency": 2,
+      "is_exam": false
+    },
+    {
+      "id": 13,
+      "name": "TC S1 GB&GEG - Géologie",
+      "group_id": 3,
+      "teacher_id": 8,
+      "duration_slots": 1,
+      "min_capacity": 50,
+      "preferred_room_type": "Small",
+      "weekly_frequency": 2,
+      "is_exam": false
+    },
+    {
+      "id": 14,
+      "name": "TC S1 GB&GEG - TD MTU",
+      "group_id": 3,
+      "teacher_id": 17,
+      "duration_slots": 1,
+      "min_capacity": 48,
+      "preferred_room_type": "Small",
+      "weekly_frequency": 1,
+      "is_exam": false
+    },
+    {
+      "id": 15,
+      "name": "CI GI - Programmation Avancée",
+      "group_id": 4,
+      "teacher_id": 18,
+      "duration_slots": 1,
+      "min_capacity": 45,
+      "preferred_room_type": "Small",
+      "weekly_frequency": 2,
+      "is_exam": false
+    },
+    {
+      "id": 16,
+      "name": "CI GI - Base de Données",
+      "group_id": 4,
+      "teacher_id": 5,
+      "duration_slots": 1,
+      "min_capacity": 45,
+      "preferred_room_type": "Small",
+      "weekly_frequency": 2,
+      "is_exam": false
+    },
+    {
+      "id": 17,
+      "name": "CI GI - Réseaux Informatiques",
+      "group_id": 4,
+      "teacher_id": 3,
+      "duration_slots": 1,
+      "min_capacity": 45,
+      "preferred_room_type": "Small",
+      "weekly_frequency": 1,
+      "is_exam": false
+    },
+    {
+      "id": 18,
+      "name": "CI GI - TP Programmation",
+      "group_id": 4,
+      "teacher_id": 18,
+      "duration_slots": 2,
+      "min_capacity": 45,
+      "preferred_room_type": "Small",
+      "weekly_frequency": 1,
+      "is_exam": false
+    },
+    {
+      "id": 19,
+      "name": "CI GP - Gestion de Production",
+      "group_id": 5,
+      "teacher_id": 12,
+      "duration_slots": 1,
+      "min_capacity": 45,
+      "preferred_room_type": "Small",
+      "weekly_frequency": 2,
+      "is_exam": false
+    },
+    {
+      "id": 20,
+      "name": "CI GP - Recherche Opérationnelle",
+      "group_id": 5,
+      "teacher_id": 19,
+      "duration_slots": 1,
+      "min_capacity": 45,
+      "preferred_room_type": "Small",
+      "weekly_frequency": 2,
+      "is_exam": false
+    },
+    {
+      "id": 21,
+      "name": "CI GP - Logistique",
+      "group_id": 5,
+      "teacher_id": 12,
+      "duration_slots": 1,
+      "min_capacity": 45,
+      "preferred_room_type": "Small",
+      "weekly_frequency": 1,
+      "is_exam": false
+    },
+    {
+      "id": 22,
+      "name": "CI GEE - Électronique de Puissance",
+      "group_id": 6,
+      "teacher_id": 2,
+      "duration_slots": 1,
+      "min_capacity": 40,
+      "preferred_room_type": "Small",
+      "weekly_frequency": 2,
+      "is_exam": false
+    },
+    {
+      "id": 23,
+      "name": "CI GEE - Automatique",
+      "group_id": 6,
+      "teacher_id": 11,
+      "duration_slots": 1,
+      "min_capacity": 40,
+      "preferred_room_type": "Small",
+      "weekly_frequency": 2,
+      "is_exam": false
+    },
+    {
+      "id": 24,
+      "name": "CI GEE - TP Électronique",
+      "group_id": 6,
+      "teacher_id": 2,
+      "duration_slots": 2,
+      "min_capacity": 40,
+      "preferred_room_type": "Lab",
+      "weekly_frequency": 1,
+      "is_exam": false
+    },
+    {
+      "id": 25,
+      "name": "CI GC - Résistance des Matériaux",
+      "group_id": 7,
+      "teacher_id": 10,
+      "duration_slots": 1,
+      "min_capacity": 40,
+      "preferred_room_type": "Small",
+      "weekly_frequency": 2,
+      "is_exam": false
+    },
+    {
+      "id": 26,
+      "name": "CI GC - Béton Armé",
+      "group_id": 7,
+      "teacher_id": 10,
+      "duration_slots": 1,
+      "min_capacity": 40,
+      "preferred_room_type": "Small",
+      "weekly_frequency": 2,
+      "is_exam": false
+    },
+    {
+      "id": 27,
+      "name": "CI GC - Mécanique des Sols",
+      "group_id": 7,
+      "teacher_id": 8,
+      "duration_slots": 1,
+      "min_capacity": 40,
+      "preferred_room_type": "Small",
+      "weekly_frequency": 1,
+      "is_exam": false
+    },
+    {
+      "id": 28,
+      "name": "IEEA - Automatique Avancée",
+      "group_id": 8,
+      "teacher_id": 11,
+      "duration_slots": 1,
+      "min_capacity": 48,
+      "preferred_room_type": "Small",
+      "weekly_frequency": 2,
+      "is_exam": false
+    },
+    {
+      "id": 29,
+      "name": "IEEA - Traitement du Signal",
+      "group_id": 8,
+      "teacher_id": 2,
+      "duration_slots": 1,
+      "min_capacity": 48,
+      "preferred_room_type": "Small",
+      "weekly_frequency": 2,
+      "is_exam": false
+    },
+    {
+      "id": 30,
+      "name": "IEEA - Projet Intégré",
+      "group_id": 8,
+      "teacher_id": 11,
+      "duration_slots": 2,
+      "min_capacity": 48,
+      "preferred_room_type": "Small",
+      "weekly_frequency": 1,
+      "is_exam": false
+    },
+    {
+      "id": 31,
+      "name": "IEGS - Management Stratégique",
+      "group_id": 9,
+      "teacher_id": 12,
+      "duration_slots": 1,
+      "min_capacity": 48,
+      "preferred_room_type": "Small",
+      "weekly_frequency": 2,
+      "is_exam": false
+    },
+    {
+      "id": 32,
+      "name": "IEGS - Marketing",
+      "group_id": 9,
+      "teacher_id": 12,
+      "duration_slots": 1,
+      "min_capacity": 48,
+      "preferred_room_type": "Small",
+      "weekly_frequency": 1,
+      "is_exam": false
+    },
+    {
+      "id": 33,
+      "name": "IEGS - Finance d'Entreprise",
+      "group_id": 9,
+      "teacher_id": 19,
+      "duration_slots": 1,
+      "min_capacity": 48,
+      "preferred_room_type": "Small",
+      "weekly_frequency": 2,
+      "is_exam": false
+    },
+    {
+      "id": 34,
+      "name": "IFA - Intelligence Artificielle",
+      "group_id": 10,
+      "teacher_id": 7,
+      "duration_slots": 1,
+      "min_capacity": 48,
+      "preferred_room_type": "Small",
+      "weekly_frequency": 2,
+      "is_exam": false
+    },
+    {
+      "id": 35,
+      "name": "IFA - Big Data",
+      "group_id": 10,
+      "teacher_id": 5,
+      "duration_slots": 1,
+      "min_capacity": 48,
+      "preferred_room_type": "Small",
+      "weekly_frequency": 2,
+      "is_exam": false
+    },
+    {
+      "id": 36,
+      "name": "IFA - TP Machine Learning",
+      "group_id": 10,
+      "teacher_id": 7,
+      "duration_slots": 2,
+      "min_capacity": 48,
+      "preferred_room_type": "Small",
+      "weekly_frequency": 1,
+      "is_exam": false
+    },
+    {
+      "id": 37,
+      "name": "MIASI - Systèmes Distribués",
+      "group_id": 11,
+      "teacher_id": 3,
+      "duration_slots": 1,
+      "min_capacity": 48,
+      "preferred_room_type": "Small",
+      "weekly_frequency": 2,
+      "is_exam": false
+    },
+    {
+      "id": 38,
+      "name": "MIASI - Sécurité Informatique",
+      "group_id": 11,
+      "teacher_id": 15,
+      "duration_slots": 1,
+      "min_capacity": 48,
+      "preferred_room_type": "Small",
+      "weekly_frequency": 2,
+      "is_exam": false
+    },
+    {
+      "id": 39,
+      "name": "MIASI - Cloud Computing",
+      "group_id": 11,
+      "teacher_id": 3,
+      "duration_slots": 1,
+      "min_capacity": 48,
+      "preferred_room_type": "Small",
+      "weekly_frequency": 1,
+      "is_exam": false
+    },
+    {
+      "id": 40,
+      "name": "GC - Structures Métalliques",
+      "group_id": 12,
+      "teacher_id": 10,
+      "duration_slots": 1,
+      "min_capacity": 48,
+      "preferred_room_type": "Small",
+      "weekly_frequency": 2,
+      "is_exam": false
+    },
+    {
+      "id": 41,
+      "name": "GC - Hydraulique",
+      "group_id": 12,
+      "teacher_id": 8,
+      "duration_slots": 1,
+      "min_capacity": 48,
+      "preferred_room_type": "Small",
+      "weekly_frequency": 2,
+      "is_exam": false
+    },
+    {
+      "id": 42,
+      "name": "EE+GARM - Électronique Analogique",
+      "group_id": 13,
+      "teacher_id": 2,
+      "duration_slots": 1,
+      "min_capacity": 48,
+      "preferred_room_type": "Small",
+      "weekly_frequency": 2,
+      "is_exam": false
+    },
+    {
+      "id": 43,
+      "name": "EE+GARM - Microcontrôleurs",
+      "group_id": 13,
+      "teacher_id": 11,
+      "duration_slots": 1,
+      "min_capacity": 48,
+      "preferred_room_type": "Small",
+      "weekly_frequency": 2,
+      "is_exam": false
+    },
+    {
+      "id": 44,
+      "name": "SIR - Réseaux Avancés",
+      "group_id": 14,
+      "teacher_id": 13,
+      "duration_slots": 1,
+      "min_capacity": 48,
+      "preferred_room_type": "Small",
+      "weekly_frequency": 2,
+      "is_exam": false
+    },
+    {
+      "id": 45,
+      "name": "SIR - Administration Système",
+      "group_id": 14,
+      "teacher_id": 3,
+      "duration_slots": 1,
+      "min_capacity": 48,
+      "preferred_room_type": "Small",
+      "weekly_frequency": 2,
+      "is_exam": false
+    },
+    {
+      "id": 46,
+      "name": "ERME - Énergies Renouvelables",
+      "group_id": 15,
+      "teacher_id": 1,
+      "duration_slots": 1,
+      "min_capacity": 48,
+      "preferred_room_type": "Small",
+      "weekly_frequency": 2,
+      "is_exam": false
+    },
+    {
+      "id": 47,
+      "name": "ERME - Thermique",
+      "group_id": 15,
+      "teacher_id": 1,
+      "duration_slots": 1,
+      "min_capacity": 48,
+      "preferred_room_type": "Small",
+      "weekly_frequency": 2,
+      "is_exam": false
+    },
+    {
+      "id": 48,
+      "name": "Master IAII - Deep Learning",
+      "group_id": 16,
+      "teacher_id": 7,
+      "duration_slots": 2,
+      "min_capacity": 25,
+      "preferred_room_type": "Small",
+      "weekly_frequency": 1,
+      "is_exam": false
+    },
+    {
+      "id": 49,
+      "name": "Master IAII - Computer Vision",
+      "group_id": 16,
+      "teacher_id": 18,
+      "duration_slots": 2,
+      "min_capacity": 25,
+      "preferred_room_type": "Small",
+      "weekly_frequency": 1,
+      "is_exam": false
+    },
+    {
+      "id": 50,
+      "name": "Master IAII - NLP",
+      "group_id": 16,
+      "teacher_id": 7,
+      "duration_slots": 1,
+      "min_capacity": 25,
+      "preferred_room_type": "Small",
+      "weekly_frequency": 1,
+      "is_exam": false
+    },
+    {
+      "id": 51,
+      "name": "MST RD - Architectures Distribuées",
+      "group_id": 17,
+      "teacher_id": 13,
+      "duration_slots": 1,
+      "min_capacity": 30,
+      "preferred_room_type": "Small",
+      "weekly_frequency": 2,
+      "is_exam": false
+    },
+    {
+      "id": 52,
+      "name": "MST RD - IoT",
+      "group_id": 17,
+      "teacher_id": 3,
+      "duration_slots": 1,
+      "min_capacity": 30,
+      "preferred_room_type": "Small",
+      "weekly_frequency": 2,
+      "is_exam": false
+    },
+    {
+      "id": 53,
+      "name": "MST RD - Projet",
+      "group_id": 17,
+      "teacher_id": 13,
+      "duration_slots": 2,
+      "min_capacity": 30,
+      "preferred_room_type": "Small",
+      "weekly_frequency": 1,
+      "is_exam": false
+    },
+    {
+      "id": 54,
+      "name": "MST GE - Gestion de Projet",
+      "group_id": 18,
+      "teacher_id": 12,
+      "duration_slots": 1,
+      "min_capacity": 28,
+      "preferred_room_type": "Small",
+      "weekly_frequency": 2,
+      "is_exam": false
+    },
+    {
+      "id": 55,
+      "name": "MST GE - Supply Chain",
+      "group_id": 18,
+      "teacher_id": 19,
+      "duration_slots": 1,
+      "min_capacity": 28,
+      "preferred_room_type": "Small",
+      "weekly_frequency": 2,
+      "is_exam": false
+    },
+    {
+      "id": 56,
+      "name": "BA - Biologie Végétale",
+      "group_id": 19,
+      "teacher_id": 9,
+      "duration_slots": 1,
+      "min_capacity": 60,
+      "preferred_room_type": "Large",
+      "weekly_frequency": 2,
+      "is_exam": false
+    },
+    {
+      "id": 57,
+      "name": "BA - Écologie",
+      "group_id": 19,
+      "teacher_id": 9,
+      "duration_slots": 1,
+      "min_capacity": 60,
+      "preferred_room_type": "Large",
+      "weekly_frequency": 1,
+      "is_exam": false
+    },
+    {
+      "id": 58,
+      "name": "BA - TP Biologie",
+      "group_id": 19,
+      "teacher_id": 16,
+      "duration_slots": 2,
+      "min_capacity": 48,
+      "preferred_room_type": "Lab",
+      "weekly_frequency": 1,
+      "is_exam": false
+    },
+    {
+      "id": 59,
+      "name": "BP - Physiologie",
+      "group_id": 20,
+      "teacher_id": 16,
+      "duration_slots": 1,
+      "min_capacity": 55,
+      "preferred_room_type": "Large",
+      "weekly_frequency": 2,
+      "is_exam": false
+    },
+    {
+      "id": 60,
+      "name": "BP - Génétique",
+      "group_id": 20,
+      "teacher_id": 9,
+      "duration_slots": 1,
+      "min_capacity": 55,
+      "preferred_room_type": "Large",
+      "weekly_frequency": 2,
+      "is_exam": false
+    },
+    {
+      "id": 61,
+      "name": "EXAM - TC S1 Analyse",
+      "group_id": 0,
+      "teacher_id": 0,
+      "duration_slots": 2,
+      "min_capacity": 400,
+      "preferred_room_type": "Amphi",
+      "weekly_frequency": 0,
+      "is_exam": true,
+      "fixed_week": "exam_period"
+    },
+    {
+      "id": 62,
+      "name": "EXAM - TC S1 Algèbre",
+      "group_id": 0,
+      "teacher_id": 14,
+      "duration_slots": 2,
+      "min_capacity": 400,
+      "preferred_room_type": "Amphi",
+      "weekly_frequency": 0,
+      "is_exam": true,
+      "fixed_week": "exam_period"
+    },
+    {
+      "id": 63,
+      "name": "EXAM - TC S3 Thermodynamique",
+      "group_id": 1,
+      "teacher_id": 1,
+      "duration_slots": 2,
+      "min_capacity": 380,
+      "preferred_room_type": "Amphi",
+      "weekly_frequency": 0,
+      "is_exam": true,
+      "fixed_week": "exam_period"
+    },
+    {
+      "id": 64,
+      "name": "EXAM - Master IAII Final",
+      "group_id": 16,
+      "teacher_id": 7,
+      "duration_slots": 2,
+      "min_capacity": 25,
+      "preferred_room_type": "Small",
+      "weekly_frequency": 0,
+      "is_exam": true,
+      "fixed_week": "exam_period"
+    }
+  ],
+
+  "constraints": {
+    "hard_constraints": [
+      {
+        "type": "no_teacher_conflict",
+        "description": "A teacher cannot teach two courses at the same time"
+      },
+      {
+        "type": "no_group_conflict",
+        "description": "A group cannot attend two courses at the same time"
+      },
+      {
+        "type": "no_room_conflict",
+        "description": "A room cannot host two events at the same time"
+      },
+      {
+        "type": "room_capacity",
+        "description": "Room capacity must be >= minimum required capacity"
+      },
+      {
+        "type": "consecutive_slots",
+        "description": "Multi-slot events must be scheduled in consecutive time slots"
+      },
+      {
+        "type": "same_day_multi_slot",
+        "description": "Multi-slot events must be on the same day"
+      }
+    ],
+    "soft_constraints": [
+      {
+        "type": "preferred_room_type",
+        "description": "Events should be assigned to their preferred room type when possible",
+        "weight": 10
+      },
+      {
+        "type": "minimize_building_changes",
+        "description": "Minimize the number of building changes for groups in a day",
+        "weight": 5
+      },
+      {
+        "type": "balanced_daily_load",
+        "description": "Distribute events evenly across days",
+        "weight": 3
+      },
+      {
+        "type": "avoid_single_slot_gaps",
+        "description": "Avoid single empty slots between courses for same group",
+        "weight": 4
+      },
+      {
+        "type": "morning_preference_lectures",
+        "description": "Schedule large lectures in morning slots when possible",
+        "weight": 2
+      },
+      {
+        "type": "afternoon_preference_labs",
+        "description": "Schedule lab sessions in afternoon slots when possible",
+        "weight": 2
+      }
+    ]
+  },
+
+  "pre_assigned_slots": [
+    {
+      "day": 0,
+      "slot": 0,
+      "room_id": 0,
+      "event_type": "TC S1 - TD",
+      "locked": true,
+      "note": "From occupation document"
+    },
+    {
+      "day": 0,
+      "slot": 1,
+      "room_id": 1,
+      "event_type": "TC S3 - TD",
+      "locked": true,
+      "note": "From occupation document"
+    },
+    {
+      "day": 1,
+      "slot": 0,
+      "room_id": 0,
+      "event_type": "TC S3",
+      "locked": true,
+      "note": "From occupation document"
+    },
+    {
+      "day": 1,
+      "slot": 0,
+      "room_id": 1,
+      "event_type": "TC S1",
+      "locked": true,
+      "note": "From occupation document"
+    },
+    {
+      "day": 2,
+      "slot": 0,
+      "room_id": 0,
+      "event_type": "TC S3",
+      "locked": true,
+      "note": "From occupation document"
+    },
+    {
+      "day": 2,
+      "slot": 0,
+      "room_id": 1,
+      "event_type": "TC S1",
+      "locked": true,
+      "note": "From occupation document"
+    },
+    {
+      "day": 3,
+      "slot": 0,
+      "room_id": 0,
+      "event_type": "TC S1",
+      "locked": true,
+      "note": "From occupation document"
+    },
+    {
+      "day": 3,
+      "slot": 0,
+      "room_id": 1,
+      "event_type": "TC S3",
+      "locked": true,
+      "note": "From occupation document"
+    },
+    {
+      "day": 4,
+      "slot": 0,
+      "room_id": 0,
+      "event_type": "TC S3",
+      "locked": true,
+      "note": "From occupation document"
+    },
+    {
+      "day": 4,
+      "slot": 0,
+      "room_id": 1,
+      "event_type": "TC S1",
+      "locked": true,
+      "note": "From occupation document"
+    }
+  ],
+
+  "unavailable_slots": [
+    {
+      "day": 5,
+      "slot": 3,
+      "room_ids": "all",
+      "reason": "Saturday afternoon - building closed"
+    }
+  ],
+
+  "teacher_preferences": [
+    {
+      "teacher_id": 0,
+      "unavailable_slots": [
+        { "day": 5, "slot": 2 },
+        { "day": 5, "slot": 3 }
+      ],
+      "preferred_days": [0, 1, 2, 3]
+    },
+    {
+      "teacher_id": 6,
+      "unavailable_slots": [
+        { "day": 5, "slot": 0 },
+        { "day": 5, "slot": 1 }
+      ],
+      "note": "Language teacher - limited Saturday availability"
+    }
+  ],
+
+  "scheduling_rules": {
+    "max_consecutive_slots_per_group": 3,
+    "min_break_between_sessions_minutes": 30,
+    "max_daily_slots_per_teacher": 3,
+    "max_weekly_slots_per_teacher": 15,
+    "exam_period_weeks": [14, 15, 16],
+    "no_exams_on_saturday": true
+  },
+
+  "statistics": {
+    "total_events": 65,
+    "total_exam_events": 4,
+    "total_regular_events": 61,
+    "total_weekly_slots_needed": 142,
+    "total_available_slots": 576,
+    "utilization_estimate": "24.7%",
+    "average_events_per_group": 3.1,
+    "groups_with_most_events": ["TC S1", "TC S3", "CI GI"],
+    "teachers_with_most_load": [
+      "Prof. MOHSINE HACHKAR",
+      "Prof. ABDELGHANI BOUSSAOUD",
+      "Prof. NAJIB BOUMAAZ"
+    ]
+  },
+
+  "validation_info": {
+    "instance_version": "2.0",
+    "compatible_with_occupation": true,
+    "all_rooms_exist": true,
+    "all_teachers_assigned": true,
+    "all_groups_valid": true,
+    "capacity_constraints_satisfied": true,
+    "generated_date": "2026-01-11",
+    "notes": [
+      "All room names match occupation document",
+      "Group names standardized to match existing schedule",
+      "Weekly frequencies added for realistic workload",
+      "Pre-assigned slots extracted from occupation document",
+      "Teacher preferences included where known",
+      "Exam events marked separately with fixed periods"
+    ]
+  }
+}

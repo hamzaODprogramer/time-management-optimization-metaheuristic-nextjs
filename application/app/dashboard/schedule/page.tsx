@@ -23,6 +23,7 @@ export default function SchedulePage() {
   const [isLoading, setIsLoading] = useState(true)
   const [selectedGroup, setSelectedGroup] = useState("all")
   const [groups, setGroups] = useState<string[]>([])
+  const [expandedItems, setExpandedItems] = useState<Set<string>>(new Set())
 
   // Database uses English day names; map to French labels for display
   const daysDb = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]
@@ -50,13 +51,13 @@ export default function SchedulePage() {
           if (Array.isArray(data.timeslots) && data.timeslots.length > 0) {
             const uniqueStarts = Array.from(
               new Set(data.timeslots.map((t: any) => (t.start || "").slice(0, 5)))
-            ).filter(Boolean)
+            ).filter(Boolean) as string[]
             uniqueStarts.sort()
             slots = uniqueStarts.map((st: string) => ({ start: st, time: st }))
           } else {
             const starts = Array.from(
               new Set((data.schedule || []).map((s: any) => (s.startTime || "").slice(0, 5)))
-            ).filter(Boolean)
+            ).filter(Boolean) as string[]
             starts.sort()
             slots = starts.map((st: string) => {
               const found = (data.schedule || []).find((s: any) => (s.startTime || "").slice(0, 5) === st)
@@ -167,22 +168,24 @@ export default function SchedulePage() {
         </div>
 
         {isLoading ? (
-          <Card>
-            <CardContent className="py-12 flex items-center justify-center">
+          <Card className="shadow-lg">
+            <CardContent className="py-16 flex items-center justify-center">
               <div className="text-center">
-                <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-primary mx-auto mb-4"></div>
-                <p className="text-muted-foreground">Loading schedule...</p>
+                <div className="animate-spin rounded-full h-16 w-16 border-b-4 border-blue-600 mx-auto mb-6"></div>
+                <p className="text-lg font-medium text-gray-600">Loading schedule...</p>
               </div>
             </CardContent>
           </Card>
         ) : (
-          <div className="overflow-x-auto">
-            <table className="w-full">
+          <div className="overflow-x-auto rounded-lg border border-gray-300 shadow-lg">
+            <table className="w-full border-collapse bg-white">
               <thead>
-                <tr className="border-b border-border">
-                  <th className="text-left p-4 font-semibold text-foreground bg-muted/50 rounded-tl-lg">Time</th>
+                <tr className="bg-gray-100 border-b-2 border-gray-300">
+                  <th className="text-center p-4 font-bold text-gray-800 border-r border-gray-300 min-w-[120px] sticky left-0 bg-gray-100 z-10">
+                    Time
+                  </th>
                   {daysDb.map((day) => (
-                    <th key={day} className="text-center p-4 font-semibold text-foreground bg-muted/50 min-w-[200px]">
+                    <th key={day} className="text-center p-4 font-bold text-gray-800 border-r border-gray-300 min-w-[200px] last:border-r-0">
                       {dayLabels[day] || day}
                     </th>
                   ))}
@@ -190,38 +193,70 @@ export default function SchedulePage() {
               </thead>
               <tbody>
                 {timeSlots.map((timeSlot, slotIndex) => (
-                  <tr key={slotIndex} className="border-b border-border">
-                    <td className="p-4 font-medium text-sm text-muted-foreground bg-muted/25 sticky left-0">
+                  <tr key={slotIndex} className="border-b border-gray-200">
+                    <td className="p-3 font-semibold text-sm text-gray-700 bg-gray-50 border-r border-gray-300 sticky left-0 z-10 text-center">
                       {timeSlot.time}
                     </td>
                     {daysDb.map((day, dayIndex) => {
                       const cellItems = filteredSchedule[dayIndex]?.slots[slotIndex] || []
 
                       return (
-                        <td key={`${day}-${slotIndex}`} className="p-2 border-l border-border min-w-[200px] align-top">
+                        <td key={`${day}-${slotIndex}`} className="p-2 border-r border-gray-200 min-w-[200px] align-top bg-gray-50 last:border-r-0">
                           {cellItems.length > 0 ? (
                             <div className="space-y-2">
-                              {cellItems.map((cell, idx) => (
-                                <div
-                                  key={`${cell.id}-${idx}`}
-                                  className="bg-primary/5 rounded-lg p-3 border border-border hover:border-primary/30 transition-colors"
-                                >
-                                  <div className="text-sm font-semibold">{cell.course}</div>
-                                  <div className="text-xs text-muted-foreground">
-                                    👨‍🏫 {cell.teacher}
+                              {cellItems.map((cell, idx) => {
+                                const itemKey = `${cell.id}-${slotIndex}-${dayIndex}`
+                                const isExpanded = expandedItems.has(itemKey)
+
+                                return (
+                                  <div
+                                    key={itemKey}
+                                    onClick={() => {
+                                      const newExpanded = new Set(expandedItems)
+                                      if (isExpanded) {
+                                        newExpanded.delete(itemKey)
+                                      } else {
+                                        newExpanded.add(itemKey)
+                                      }
+                                      setExpandedItems(newExpanded)
+                                    }}
+                                    className={`
+                                      bg-white rounded border-2 border-blue-500 p-2.5 cursor-pointer 
+                                      hover:shadow-lg transition-all duration-300
+                                      ${isExpanded ? 'w-full' : 'w-auto'}
+                                    `}
+                                  >
+                                    {/* Compact view - cours, salle, groupe */}
+                                    <div className={isExpanded ? 'mb-2' : ''}>
+                                      <div className="text-xs font-bold text-gray-900">
+                                        {cell.course}
+                                      </div>
+                                      <div className="text-[10px] text-gray-600 mt-1">
+                                        🏛️ {cell.room}
+                                      </div>
+                                      <div className="text-[10px] text-gray-500">
+                                        👥 {cell.group}
+                                      </div>
+                                    </div>
+
+                                    {/* Expanded details - prof + horaire */}
+                                    {isExpanded && (
+                                      <div className="pt-2 border-t border-gray-200 space-y-1">
+                                        <div className="text-[10px] text-gray-700">
+                                          <span className="font-semibold">Prof:</span> {cell.teacher}
+                                        </div>
+                                        <div className="text-[10px] text-gray-700">
+                                          <span className="font-semibold">Horaire:</span> {cell.startTime} - {cell.endTime}
+                                        </div>
+                                      </div>
+                                    )}
                                   </div>
-                                  <div className="text-xs text-muted-foreground">
-                                    🏛️ {cell.room}
-                                  </div>
-                                  <div className="text-xs text-muted-foreground">
-                                    👥 {cell.group}
-                                  </div>
-                                </div>
-                              ))}
+                                )
+                              })}
                             </div>
                           ) : (
-                            <div className="h-24 flex items-center justify-center">
-                              <p className="text-xs text-muted-foreground">No class scheduled</p>
+                            <div className="h-20 flex items-center justify-center text-gray-300 text-xs">
+                              No class
                             </div>
                           )}
                         </td>
@@ -242,20 +277,12 @@ export default function SchedulePage() {
           <CardContent>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
               <div className="flex items-center gap-3">
-                <div className="w-4 h-4 rounded bg-primary/30"></div>
+                <div className="w-4 h-4 rounded bg-blue-500 border-2 border-blue-600"></div>
                 <span className="text-sm text-muted-foreground">Regular Class</span>
               </div>
               <div className="flex items-center gap-3">
-                <div className="w-4 h-4 rounded bg-accent/30"></div>
-                <span className="text-sm text-muted-foreground">TD/Practical</span>
-              </div>
-              <div className="flex items-center gap-3">
-                <div className="w-4 h-4 rounded bg-chart-2/30"></div>
-                <span className="text-sm text-muted-foreground">Exam</span>
-              </div>
-              <div className="flex items-center gap-3">
-                <div className="w-4 h-4 rounded bg-destructive/30"></div>
-                <span className="text-sm text-muted-foreground">Conflict</span>
+                <div className="w-4 h-4 rounded bg-white border-2 border-blue-500"></div>
+                <span className="text-sm text-muted-foreground">Click to expand details</span>
               </div>
             </div>
           </CardContent>
